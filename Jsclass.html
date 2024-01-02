@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Class Demo</title>
+</head>
+
+<body>
+    <p id="p1"></p>
+    <p id="cage"></p>
+    <div>
+
+
+
+
+
+
+
+        <table border="1">
+            <thead>
+                <th>Carname</th>
+                <th>Year</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Price</th>
+            </thead>
+            <tbody id="tb">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // create class 
+        class Car {
+            constructor(name, year, model, color, price) {
+                this.name = name;
+                this.year = year;
+                this.model = model;
+                this.color = color;
+                this.price = price;
+            }
+            Display() {
+                let cardetails = this.name + " ," + this.model + "," + this.year + "," + this.price;
+                document.getElementById('p1').innerHTML = cardetails;
+            }
+            car_age() {
+                const cdate = new Date();
+                let cyear = cdate.getFullYear();
+                return cyear - this.year;
+            }
+            updateprice(amount) {
+                this.price = this.price + amount;
+                alert("price updated sucessfully");
+            }
+
+        }
+
+
+
+        const mycar = new Car("Hundai", 2017, "Aura", "Tealblue", 1050000);
+        mycar.Display();
+        document.getElementById('cage').innerHTML = mycar.car_age() + "year old car";
+        mycar.updateprice(50000);
+        mycar.Display();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Json Data</title>
+</head>
+
+<body>
+    <p>Family Details: <span id="f1"></span></p>
+    <p>Family Details below age 25 : <span id="f2"></span></p>
+
+    <script>
+
+
+        const myfamily = [{
+
+            "id": 101,
+            "fname": "vishal",
+            "age": 24
+        },
+        {
+
+            "id": 102,
+            "fname": "rahul",
+            "age": 25
+        },
+        {
+
+            "id": 103,
+            "fname": "mukesh",
+            "age": 27
+        },
+        {
+            "id": 104,
+            "fname": "shalu",
+            "age": 22
+        },
+        {
+            "id": 105,
+            "fname": "Gaurav",
+            "age": 22
+        }, {
+            "id": 106,
+            "fname": "Vaibhav",
+            "age": 22
+        }]
+
+        let text = '{"emp":[' + '{"fn":"Mukesh","ln":"kumar"},' + '{"fn":"Rakesh","ln":"sharma"}]}'
+
+        //convert text file into json object 
+        const obj = JSON.parse(text);
+
+        console.log(obj.emp[1].fn + " " + obj.emp[1].ln);
+
+        console.log(myfamily);
+
+        let family1 = "<ul>";
+        for (let i = 0; i < myfamily.length; i++) {
+
+            family1 += "<li>" + myfamily[i].id + " " + myfamily[i].fname + " " + myfamily[i].age + "</li>";
+
+        }
+        family1 += "</ul>";
+        console.log(family1);
+
+        document.getElementById('f1').innerHTML = family1;
+
+        //getting family data of age below 25 years
+
+        let family2 = "<ul>";
+        for (let i = 0; i < myfamily.length; i++) {
+
+            if (myfamily[i].age < 25) {
+
+                family2 += "<li>" + myfamily[i].id + " " + myfamily[i].fname + " " + myfamily[i].age + "</li>";
+            }
+        }
+        family1 += "</ul>";
+        console.log(family2);
+
+        document.getElementById('f2').innerHTML = family2;
+
+
+
+    </script>
+
+</body>
+
+</html>

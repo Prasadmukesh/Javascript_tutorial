@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <link rel="stylesheet" href="CSS/dg.css">
+    <script src="analogc.js"></script>
+</head>
+
+<body>
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+    <div>
+        <h1>Generate 4 Digits OTP</h1>
+        <h2>OTP: <span id='otp'></span></h2>
+        <script>
+
+
+            // Function to generate OTP 
+            function generateOTP() {
+
+                // Declare a digits variable 
+                // which stores all digits 
+                var digits = '0123456789';
+                let OTP = '';
+                for (let i = 0; i < 4; i++) {
+                    OTP += digits[Math.floor(Math.random() * 10)];
+                }
+                return OTP;
+            }
+
+            document.getElementById('otp').innerHTML = generateOTP();
+
+        </script>
+
+
+    </div>
+    <div>
+        <h1>Generate 8 characters password</h1>
+        <h2>One time password: <span id='pswd'></span></h2>
+        <script>
+
+
+            // Function to generate OTP 
+            function generate_password() {
+
+                // Declare a digits variable 
+                // which stores all digits 
+                var digits = '0123456789';
+                var vletters = 'aeiou';
+                var cletters = 'AEIOU';
+                var symbols = '$!#@&';
+                const charsets = digits + cletters + vletters + symbols;
+                let OTP = '';
+                for (let i = 0; i < 8; i++) {
+                    OTP += charsets[Math.floor(Math.random() * 25)];
+                }
+                return OTP;
+            }
+
+            document.getElementById('pswd').innerHTML = generate_password();
+
+        </script>
+
+
+    </div>
+    <div style="margin-top: 50px;">
+        <form action="" style="background-color: blueviolet; color: antiquewhite;text-align: center;padding: 30px;">
+            <p>
+                Enter Password:
+                <input type="text" placeholder="Enter password" id="t1" />
+                <br />
+                <br />
+                <input type="button" value="Check" onclick="test_str()" />
+                <br />
+                <br /> Output:
+                <input type="text" id="t2" readonly />
+            </p>
+        </form>
+        <script>
+            function test_str() {
+                var res;
+                var str = document.getElementById("t1").value;
+                if (str.match(/[a-z]/g) && str.match(
+                    /[A-Z]/g) && str.match(
+                        /[0-9]/g) && str.match(
+                            /[^a-zA-Z\d]/g) && str.length >= 8)
+                    res = "verified";
+                else
+                    res = "not verified";
+                document.getElementById("t2").value = res;
+
+            } 
+        </script>
+    </div>
+
+</body>
+
+</html>

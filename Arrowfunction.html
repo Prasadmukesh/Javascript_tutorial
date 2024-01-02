@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Demo</title>
+</head>
+
+<body>
+
+    <h3 id="name"></h3>
+    <p id="result1"></p>
+
+    <input type="button" value="display dataset age>=20" onclick="fun1()">
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <script>
+        const dataset = [{ "name": "Yukti", "age": 23 }, { "name": "Aditi", "age": 19 }, { "name": "Nitesh", "age": 20 }, { "name": "Shamun", "age": 19 }, { "name": "Mukesh", "age": 38 }];
+
+        let fun1 = () => {
+            let st = "<ul>";
+            for (p of dataset) {
+                if (p.age >= 20) {
+                    st += "<li>" + p.name + " " + p.age + "</li>";
+                }
+
+            }
+            st += "</ul>";
+
+            document.getElementById('result1').innerHTML = st;
+        }
+
+        hello = (fn, ln) => "Hello " + fn + " " + ln;
+
+        document.getElementById('name').innerHTML = hello("Nitesh", "kaushik");
+
+        // fun1();
+        /*
+                newdataset = dataset.filter(agegtr20);
+                document.write(newdataset);
+        
+                let agegtr20 = (a) => {
+                    if (a > 20) {
+                        return dataset.name + " " + dataset.age;
+                    }
+                }
+                
+                function agefilter(a){
+                    if(a>18)
+                    {
+                        return a;
+                    }
+                }
+        
+        
+                /* Js Function
+        
+                function msg()
+                {
+                    alert("Good Morning India!");
+                }*/
+        /* same as */
+        /*  let msg = () => {
+              alert("Good Morning India!");
+          }
+          let Add = (a, b) => {
+              return a + b;
+          }
+          let hello = (name) => "Hello " + name;
+  
+          // let sayhello = x => x + 10;
+  
+          function sayhello(x) {
+              return x + 10;
+          }
+  
+          function mul(p, q) {
+              return p * q;
+          }
+  
+          let mul = (p, q) => {
+              return p * q;
+          }
+          //let sum = Add(55, 99);
+          /*   document.getElementById('result1').innerHTML = hello("shivani");
+             document.getElementById('result2').innerHTML = sayhello(100);
+             document.getElementById('result3').innerHTML = mul(100, 10);
+     
+             msg();*/
+
+    </script>
+
+</body>
+
+</html>

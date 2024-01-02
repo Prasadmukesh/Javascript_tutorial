@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrayexample</title>
+</head>
+
+<body>
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="demo"></p>
+    <h3 id="friends"></h3>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "pineapple"];
+
+        const names = ["Mirajul", "Shamun", "Nitesh", "Shivani", "Aditi", "Yukti"]
+        let fLen = fruits.length;
+
+        fruits.push("Lichhi");
+        fruits.push("Guava");
+        fruits.push("Strawberry");
+
+        function additem() {
+            let fname = document.getElementById('item').value;
+
+            fruits.push(fname);
+            fruits[fruits.length] = "Lemon";
+            alert(fname + "Item added");
+        }
+        fruits.push("Gauva1");
+        // fruits[fruits.length] = "Lemon";
+        //fruits.pop();
+
+
+        /* let text = "<ul>";
+         for (let i = 0; i < fLen; i++) {
+             text += "<li>" + fruits[i] + "</li>";
+         }
+         text += "</ul>";
+ 
+         document.getElementById("demo").innerHTML = text;*/
+
+        let text = "<ul>";
+        fruits.forEach(Display);
+        text += "</ul>";
+
+        document.getElementById("demo").innerHTML = text;
+
+        function Display(item) {
+            text += "<li>" + item + "</li>";
+
+        }
+
+
+        let namelst = "<ol>";
+        names.forEach(fun);
+        namelst += "</ol>";
+        document.getElementById("friends").innerHTML = namelst;
+        function fun(name) {
+            namelst += "<li>" + name + "</li>";
+        }
+        const word = "Indian";
+        console.log(word.charCodeAt(0))
+
+    </script>
+    <form action="">
+        <fieldset>
+            <legend>Enter Item Details</legend>
+            <label for="add item">Enter Items:</label>
+            <input type="text" name="item" id="item">
+            <input type="button" value="Add Item" onclick="additem()">
+        </fieldset>
+    </form>
+</body>
+
+</html>

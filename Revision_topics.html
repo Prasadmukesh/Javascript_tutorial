@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision </title>
+
+</head>
+
+<body onload=msg();>
+    <header
+        style="height: 200px;background-color: chocolate;display: flex;justify-content: center;align-items: center; color: aliceblue;">
+
+        <p style="font-size: 50px;">Date: <span id="tdate"></span></p>
+        <p style="font-size: 50px;">Time: <span id="ttime"></span></p>
+    </header>
+    <div>
+        <p id='para1'>Welcome to javascript</p>
+    </div>
+    <script>
+        var date = new Date();
+        document.getElementById('tdate').innerHTML = date.toLocaleDateString();
+        setTimeout(function () {
+            document.getElementById('ttime').innerHTML = date.toLocaleTimeString();
+        }, 1000)
+        function msg() {
+            var x = "Welcome to Tgc!";
+            document.getElementById('para1').innerHTML = x;
+
+        }
+
+    </script>
+    <div>
+        <h1> Js Function </h1>
+        <h2 id="name"></h2>
+        <span>Object Details:</span>
+        <p id="p1"></p>
+    </div>
+    <hr>
+    <div>
+        <form action="f1">
+            <div style="margin-bottom: 20px;">
+                <label for="">Enter First name</label>
+                <input type="text" name="" id="fn">
+            </div>
+            <div style="margin-bottom: 20px;">
+                <label for="">Enter Last name</label>
+                <input type="text" name="" id="ln">
+            </div>
+        </form>
+
+        <button onclick=" Displaymessage();">Click me</button>
+        <button onclick="Displayfullname();">DisplayFullname</button>
+    </div>
+    <script>
+        // create function
+        function Displaymessage() {
+            var msg = "Good Morning India!";
+            alert(msg);
+        }
+
+
+        function Displayfullname() {
+            var fname = document.getElementById('fn').value;
+            var lname = document.getElementById('ln').value;
+            if (fname == '' && lname == '') {
+                alert("please enter your firstname and lastname");
+                return;
+            }
+            var fullname = fname + " " + lname;
+            // alert(`My full name is ${fullname}`);
+            document.getElementById('name').innerHTML = fullname;
+
+        }
+
+        // calling function 
+        // Js Object
+        //Declare
+        let person = {
+            id: 10104,
+            fname: "Mukesh",
+            lname: "Kumar",
+            age: 33,
+            city: "Delhi",
+            salary: 45000.00,
+            fullname: function () {
+                return this.fname + " " + this.lname;
+            },
+            updatesal: function (amount) {
+                this.salary = this.salary + amount;
+            }
+        };
+        var pdetails = person.id + " " + person.fullname() + " " + person.age + " " + person.city + " " + person.salary;
+        document.getElementById('p1').innerHTML = pdetails;
+
+
+        //array of objects
+        //object in js
+        let Person = [{
+            id: 100,
+            name: "Mukesh",
+            age: 33,
+            city: "Delhi",
+            salary: 120000,
+            pic: "img_girl.jpg"
+        },
+        {
+            id: 101,
+            name: "Gaurav",
+            age: 20,
+            city: "Delhi",
+            salary: 140000
+        },
+        {
+            id: 104,
+            name: "Tannu",
+            age: 18,
+            city: "Delhi",
+            salary: 130000
+        },
+        {
+            id: 105,
+            name: "Srishti",
+            age: 18,
+            city: "Delhi",
+            salary: 130000
+        }];
+
+        //Accesing Array Data
+        for (p of Person) {
+
+            document.write(p.id + " " + p.name + " " + p.age + " " + p.city + " " + p.salary + " " + p.pic + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

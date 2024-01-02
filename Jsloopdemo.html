@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js loop demo</title>
+</head>
+
+<body>
+    <script>
+        const Cars = ["Honda", "BMW", "Audi", "Mahindra", "Kia", "Hyundai", "Swift", "Tata", "Jaguar", "Maruti", "Mercedes"];
+        const mpg = [12, 15, 10, 10, 18, 9, 20, 16, 10, 17, 20];
+
+        // using for loop
+        for (let j = 0; j < Cars.length; j++) {
+            document.write(j + ":" + Cars[j] + " :" + mpg[j] + "<br>");
+
+        }
+        document.write("<br>");
+        for (let j in Cars) {
+            document.write(j + ":" + Cars[j] + "<br>");
+        }
+        //using for of
+        for (let j of Cars) {
+            document.write(j + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USER FORM</title>
+    <style>
+        .fdiv {
+            margin-top: 16px;
+            padding: 10px 16px;
+        }
+
+        label {
+            font-size: large;
+            color: antiquewhite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header style="text-align: center; background-color: burlywood;">
+        <h1>JS CODE FOR DISPLAYING DATA BELOW</h1>
+    </header>
+    <div
+        style=" background-color: blueviolet; height: 450px; width: 400px; border: 1px solid black; margin-left: 450px;">
+        <form action="" style="text-align: center;">
+
+            <h2>FILL THE DETAILS</h2>
+
+            <div class="fdiv">
+                <label for="">Enter Name:</label>
+                <br>
+                <input type="text" name="uname" id="uname">
+            </div>
+            <div class="fdiv">
+                <label for="">Address:</label>
+                <br>
+                <input type="text" name="uaddress" id="uaddress">
+            </div>
+            <div class="fdiv">
+                <label for="">Email:</label>
+                <br>
+                <input type="email" name="uemail" id="uemail">
+            </div>
+            <div class="fdiv">
+                <label for="">Phone :</label>
+                <br>
+                <input type="tel" name="utel" id="utel">
+            </div>
+            <div class="fdiv">
+                <input type="button" value="Submit" onclick="Savedata()">
+            </div>
+        </form>
+        <script>
+            function Savedata() {
+                var pname = document.getElementById('uname').value;
+                var paddress = document.getElementById('uaddress').value;
+                var pemail = document.getElementById('uemail').value;
+                var pphone = document.getElementById('utel').value;
+                document.getElementById('name').innerHTML = pname;
+                document.getElementById('adrs').innerHTML = paddress;
+                document.getElementById('email').innerHTML = pemail;
+                document.getElementById('tel').innerHTML = pphone;
+            }
+        </script>
+    </div>
+    <br><br>
+    <div class="fdiv" style="background-color: cadetblue; text-align:justify;">
+        <label for="">Full name: <span id="name"></span></label> <br>
+        <label for="">Address: <span id="adrs"></span> </label><br>
+        <label for="">Email : <span id="email"></span></label> <br>
+        <label for="">Phone: <span id="tel"></span></label> <br>
+    </div>
+
+
+
+    <div>
+        <p>Click the radio button to toggle between password visibility:</p>
+
+        Password: <input type="password" value="FakePSW" id="myInput"><br><br>
+        <input type="checkbox" onclick="myFunction()">Show Password
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myInput");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#home" title="HOME PAGE">Home</a>
+    </nav>
+    <div>
+        <form action="">
+            <label for="">Enter Limit:</label>
+            <input type="text" name="range" id="range">
+
+            <label for="">Enter Messge:</label>
+            <input type="text" name="msg" id="msg">
+            <br>
+            <input type="button" value="Show" onclick="fun()">
+        </form>
+        <script>
+
+            let num = parseInt((prompt("Enter any number")));
+            let c = 0;
+            while (num != 0) {
+                digit = num % 10;
+                c++;
+                num = parseInt(num / 10);
+            }
+            alert("Number of digits=" + c);
+
+            function fun() {
+                n = parseInt(document.getElementById('range').value);
+                let k = 1;
+                let ms = document.getElementById('msg').value;
+                while (k <= n) {
+                    document.write(ms + "<br>");
+                    k = k + 1;
+                }
+            }
+
+
+        </script>
+    </div>
+
+</body>
+
+</html>

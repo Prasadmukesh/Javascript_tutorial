@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js String manipulation</title>
+</head>
+
+<body>
+    <p id="p1"> </p><span id="l1"></span>
+    <p id="p2"> </p><span id="l2"></span>
+    <p id="p3"> </p><span id="l3"></span>
+    <script>
+        let str = "hello shivani";
+        let str1 = "1234567890";
+        let msg = "good morning world";
+        document.getElementById('p1').innerHTML = str;
+        document.getElementById('p2').innerHTML = str1;
+        document.getElementById('p3').innerHTML = msg;
+        document.getElementById('l1').innerHTML = str.length;
+        document.getElementById('l2').innerHTML = str1.length;
+        document.getElementById('l3').innerHTML = msg.length;
+
+        // program to find the ASCII value of a character
+
+        // take input from the user
+        const string = prompt('Enter a character: ');
+
+        // convert into ASCII value
+        // const result = string.charCodeAt(0);
+
+        // console.log(`The ASCII value is: ${result}`);
+        //console.log("The ASCII value is: " + result);
+        let part = string.slice(0, 4);
+        console.log(part);
+        for (let v = 0; v <= string.length; v++) {
+            const result = string.charCodeAt(v);
+            console.log("The ASCII value is: " + result);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

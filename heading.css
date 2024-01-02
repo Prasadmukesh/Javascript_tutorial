@@ -1,0 +1,20 @@
+*{
+    padding: 0px;
+    margin: 0px;
+   
+
+    }
+
+body{
+    background-color: antiquewhite;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.myheader{
+    height: 100px;
+    background-color: dimgray;
+    color: white;
+    text-align: center;
+}

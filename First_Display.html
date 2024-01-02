@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page using JS</title>
+
+    <link rel="stylesheet" href="heading.css">
+</head>
+
+<body>
+    <div class="myheader">
+        <p id="para1">Wecome to my first web page with javascript</p>
+        <h3>Date: <span id="todaydate"></span></h3>
+    </div>
+    <h1 id="heading1" style="text-align: center;color: blueviolet;"></h1>
+    <h3 id="aboutme"></h3>
+    <script>
+        window.alert("Welcome to my web page");
+        document.write("Hello India");
+        document.getElementById('heading1').innerHTML = "Hello Mr. JavaScript";
+        var myname = "Yukti";
+        var age = 18;
+        console.log("Hello " + myname + "i am " + age + "years old");
+        document.getElementById('aboutme').innerHTML = "Hello " + myname + " i am " + age + "years old";
+    </script>
+
+    <h1>Inline js</h1>
+    <button onclick="alert('Hello World!');">CLICK ME</button>
+    <button type="button" onclick="document.getElementById('para1').style.color='red';">ChangeHeaderColor</button>
+    <button type="button"
+        onclick="document.getElementById('para1').style.fontSize='30px';">ChangeHeaderFontsize</button>
+    <button onclick="document.getElementById('todaydate').innerHTML=Date().toString();">DisplayDate</button>
+
+    <h1>
+        change background color:
+    </h1>
+
+    <p>
+        <button onclick="document.body.style.backgroundColor='red'">Red</button>
+    </p>
+    <p>
+        <button onclick="document.body.style.backgroundColor='yellow'">Yellow</button>
+    </p>
+    <p>
+        <button onclick="document.body.style.backgroundColor='Gray'">Gray</button>
+    </p>
+    <p>
+        <button onclick="document.body.style.color='Green'">GREEN</button>
+    </p>
+
+    <script>
+        let x, y, z;
+        x = 100;
+        y = 200;
+        z = 300;
+        let sum = x + y + z;
+        alert("total is " + sum);
+    </script>
+</body>
+
+</html>

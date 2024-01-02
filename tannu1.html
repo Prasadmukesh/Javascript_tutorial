@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js class</title>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1>Js display </h1>
+        <p><span id="today"> </span> <span id=time></span></p>
+    </header>
+    <hr>
+    <h1 id="msg"></h1>
+
+    <label for="">Enter Your Name:</label> <br>
+    <input type="text" name="myname" id="myname">
+    <br><br>
+    <label for="">Enter Your City:</label> <br>
+    <input type="text" name="mycity" id="mycity">
+    <input type="button" value="show" onclick="Display()">
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        let date = new Date();
+        document.getElementById('today').innerHTML = date.toLocaleDateString();
+        document.getElementById('time').innerHTML = date.toLocaleTimeString();
+        function Display() {
+            let pname = document.getElementById('myname').value;
+            let pcity = document.getElementById('mycity').value;
+            console.log(pname);
+            var message = "Good Morning" + " " + pname + " " + pcity;
+            console.log(message);
+            document.getElementById('msg').innerHTML = message;
+            document.getElementById('msg').style.color = 'Red';
+            /* document.write(message + "<br>");
+            document.write(message + "<br>");
+            document.write(message + "<br>");
+            document.write(message + "<br>");
+             */
+        }
+
+
+        let text1 = "     Hello World!     ";
+        let price = 1234.99;
+
+        let price1 = 10;
+        let VAT = 0.25;
+        let total = `Total: ${(price1 * (1 + VAT)).toFixed(2)}`;
+
+        document.getElementById("demo1").innerHTML = total;
+        let text2 = text1.trim();
+        alert(`text1 is ${text2} ,${price}`);
+        document.getElementById("demo").innerHTML =
+            "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+    </script>
+
+
+
+
+</body>
+
+</html>

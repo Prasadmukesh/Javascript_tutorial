@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comman js events</title>
+    <style>
+        :root {
+            --bgcolor: pink;
+            --textcolor: red;
+
+        }
+
+        .adcontainer {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bgcolor);
+
+
+        }
+
+        .adcontainer img {
+            height: 190px;
+            width: 190px;
+            border: 1px solid black;
+
+        }
+
+        #image-container {
+            height: 200px;
+            width: 200px;
+            margin-left: 550px;
+
+        }
+
+        #image-container img {
+            width: 100%;
+        }
+
+        #image-container img:hover {
+            cursor: zoom-in;
+
+        }
+
+        body {
+            background-color: var(--bgcolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p style="font-size: 40px; text-align: center;background-color: cadetblue;"><span style="color: chocolate;">
+                I</span><span style="color: white;"> LOVE
+            </span><span style="color: green;">INDIA</span>
+        </p>
+    </div>
+
+    <marquee behavior="" direction="" scrollamount="20" onmouseover="this.stop()" onmouseleave="this.start();">
+        <div class="adcontainer">
+            <img src="img_lights_wide.jpg" alt="">
+            <img src="img_girl.jpg" alt="">
+            <img src="img_snow_wide.jpg" alt="">
+            <img src="img_mountains_wide.jpg" alt="">
+        </div>
+    </marquee>
+    <div id="image-container">
+        <img src="img_nature_wide.jpg" alt="">
+    </div>
+
+
+    <form action="">
+        <label for="selectcountry">
+            Select Country:
+        </label>
+        <select name="" id="country" onchange="fun1();">
+            <option value="INDIA">India</option>
+            <option value="JAPAN">Japan</option>
+            <option value="USA">Usa</option>
+            <option value="Australia">Australia</option>
+            <option value="China">China</option>
+        </select>
+        <br>
+        <label for="">You have selected:</label>
+        <label for="showdetails" id="show" style="font-size: 20px;"></label>
+    </form>
+    <script>
+        // Onchange events
+        function fun1() {
+            let c = document.getElementById('country').value;
+            document.getElementById('show').innerHTML = " " + c;
+            document.getElementById('show').style.color = "Red";
+
+        }
+        let y = "1234";
+        console.log(typeof y);
+        let x = Number(y);
+        console.log(typeof x);
+
+    </script>
+
+</body>
+
+</html>

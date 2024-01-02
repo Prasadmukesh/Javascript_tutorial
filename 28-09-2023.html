@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page using JS</title>
+
+    <link rel="stylesheet" href="heading.css">
+</head>
+
+<body>
+    <div class="myheader">
+        <p id="para1">Wecome to my first web page with javascript</p>
+        <h3>Date: <span id="todaydate"></span></h3>
+    </div>
+    <p id="p1"></p>
+
+    <script>
+        x = 100;
+        let p = 12345;
+        let q = 123.99;
+        let n = "Hello";
+        document.write(typeof p + " " + typeof q + " " + typeof n + "x=" + x + "<br>");
+        console.log(p);
+        document.write(p);
+        ele = document.getElementById('p1');
+        ele.innerHTML = x;
+        marks = 43;
+
+        result = (marks >= 50) ? "PASS" : "FAIL";
+        alert(" YOU ARE " + result);
+
+    </script>
+
+
+    <script>
+        num1 = parseInt(prompt("Enter a number1"));
+        num2 = parseInt(prompt("Enter number2 :"));
+        var c = num1 + num2;
+        alert("sum is " + c);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Example</title>
+    <link rel="stylesheet" href="mystyle1.css">
+</head>
+
+<body>
+    <h1 id="p2" class="h"></h1>
+    <p id="p1"></p>
+
+    <script type="module">
+        import message from "./message.js";
+        import HelloIndia from "./HelloIndia.js";
+
+        document.getElementById('p1').innerHTML = message();
+        document.getElementById('p2').innerHTML = HelloIndia();
+
+
+
+    </script>
+
+</body>
+
+</html>

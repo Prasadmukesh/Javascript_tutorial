@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generate otp using js</title>
+    <style>
+        input[type="text"] {
+            height: 26px;
+            width: 50%;
+            font-size: large;
+        }
+
+        input[type="button"] {
+            width: 30%;
+            height: 30px;
+            background-color: blue;
+            color: antiquewhite;
+            font-size: 20px;
+        }
+
+        div {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Generate 4 Digits OTP</h1>
+        <h2>OTP: <span id='otp'></span></h2>
+        <p><input type="button" value="GenerateOTP" onclick="document.getElementById('otp').innerHTML=generateOTP();">
+        </p>
+        <script>
+
+            /* var randnumber = Math.random();
+             console.log(randnumber);
+             rnum = randnumber * 10;
+             console.log(Math.floor(rnum))*/
+            // Function to generate OTP 
+            function generateOTP() {
+
+                // Declare a digits variable 
+                // which stores all digits 
+                var digits = '9876543210';
+                let OTP = '';
+                for (let i = 0; i < 4; i++) {
+                    OTP += digits[Math.floor(Math.random() * 10)];
+                }
+                return OTP;
+            }
+
+            //  document.getElementById('otp').innerHTML = generateOTP();
+
+        </script>
+
+
+    </div>
+    <div>
+        <h1>Generate 8 characters password</h1>
+        <h2>One time password: <span id='pswd'></span></h2>
+        <script>
+
+
+            // Function to generate OTP 
+            function generate_password() {
+
+                // Declare a digits variable 
+                // which stores all digits 
+                var digits = '0123456789';
+                var vletters = 'aeiou';
+                var cletters = 'AEIOU';
+                var symbols = '$!#@&';
+                const charsets = digits + cletters + vletters + symbols;
+                let OTP = '';
+                for (let i = 0; i < 8; i++) {
+                    OTP += charsets[Math.floor(Math.random() * 25)];
+                }
+                return OTP;
+            }
+
+            document.getElementById('pswd').innerHTML = generate_password();
+
+        </script>
+
+
+    </div>
+    <div style="margin-top: 50px;">
+        <form action="" style="background-color: blueviolet; color: antiquewhite;text-align: center;padding: 30px;">
+            <p>
+                Enter Password:
+                <input type="text" placeholder="Enter password" id="t1" required />
+                <br />
+                <br />
+                <input type="button" value="Check" onclick="test_str()" />
+                <br />
+                <br /> Output:
+                <input type="text" id="t2" readonly />
+            </p>
+        </form>
+        <!-- verify password -->
+        <script>
+            function test_str() {
+                var res;
+                var str = document.getElementById("t1").value;
+                if (str.match(/[a-z]/g) && str.match(
+                    /[A-Z]/g) && str.match(
+                        /[0-9]/g) && str.match(
+                            /[^a-zA-Z\d]/g) && str.length >= 8)
+                    res = "verified";
+                else
+                    res = "not verified";
+                document.getElementById("t2").value = res;
+
+            }
+
+        </script>
+        <!-- verify email -->
+
+    </div>
+    <div>
+        <form action="" style="background-color: blueviolet; color: antiquewhite;text-align: center;padding: 30px;">
+            <p>
+                Enter Password:
+                <input type="email" placeholder="Enter email" id="e1" required />
+                <br />
+                <br />
+                <input type="button" value="Check" onclick="test_email()" />
+                <br />
+                <br /> Output:
+                <input type="text" id="e2" readonly />
+            </p>
+        </form>
+        <script>
+            function test_email() {
+                var res;
+                var str = document.getElementById("e1").value;
+                if (str.match(/[@]/g) && str.match(
+                    /[.]/g))
+                    res = "verified";
+                else
+                    res = "not verified";
+                document.getElementById("e2").value = res;
+
+            } 
+        </script>
+    </div>
+</body>
+
+</html>

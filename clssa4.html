@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function cal() {
+            var c = parseFloat(document.getElementById('cel').value);
+            console.log(c);
+            var f = (9 * c) / 5 + 32;
+            console.log(f);
+            f1.res.value = f;
+        }
+
+    </script>
+    <style>
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="rain.mp4" type="video/mp4">
+    </video>
+    <div class="content">
+
+        <div>
+            <h2 id="p1"></h2>
+        </div>
+
+        <form action="" id="f1">
+            <label for="">Temp IN Celcius:</label>
+            <br> <br>
+            <input type="text" name="cel" id="cel">
+            <br> <br>
+            <input type="text" name="res" id="res">
+            <br> <br>
+            <input type="button" value="Convert" onclick="cal()">
+        </form>
+        <br><br>
+        <hr>
+        <form action="" id="calculator">
+            <label for="">Number1:</label> <input type="text" name="n1" id="n1"> <br> <br>
+            <label for="">Number2:</label> <input type="text" name="n2" id="n2">
+            <br>
+            <br>
+            <label for="">Result:</label> <input type="text" name="n3" id="n3">
+            <br><br>
+            <input type="button" value="+" onclick="Add()">
+            <input type="button" value="-" onclick="Sub()">
+            <input type="button" value="exchange" onclick="exchange()">
+            <input type="button" value="MAX" onclick="highest()">
+            <input type="button" value="Check" onclick="compare()">
+
+        </form>
+
+
+        <script>
+            function Add() {
+
+                var n1 = parseInt(calculator.n1.value);
+                var n2 = parseInt(calculator.n2.value);
+
+                var r = n1 + n2;
+                calculator.n3.value = r;
+            }
+            function Sub() {
+
+                var n1 = parseInt(calculator.n1.value);
+                var n2 = parseInt(calculator.n2.value);
+
+                var r = n1 - n2;
+                calculator.n3.value = r;
+            }
+
+            function exchange() {
+                var n1 = calculator.n1.value;
+                var n2 = calculator.n2.value;
+                var r = n1;
+                n1 = n2;
+                n2 = r;
+                calculator.n1.value = n1;
+                calculator.n2.value = n2;
+
+            }
+            function highest() {
+                var n1 = parseInt(calculator.n1.value);
+                var n2 = parseInt(calculator.n2.value);
+                var r;
+                if (n1 > n2) {
+                    r = n1;
+                }
+                else {
+                    r = n2;
+                }
+
+                calculator.n3.value = r;
+
+            }
+            function compare() {
+                var n1 = parseInt(calculator.n1.value);
+                var n2 = parseInt(calculator.n2.value);
+                var r;
+                if (n1 == n2) {
+                    r = "Equal";
+                }
+                else {
+                    r = "Not Eqaual";
+                }
+
+                calculator.n3.value = r;
+
+            }
+
+            const person = { firstName: "Gaurav", lastName: "Bamal", age: 19, city: "Delhi" };
+
+            // Array object:
+            const cars = ["Saab", "Volvo", "BMW", "Audi", "Mahindra", "Kia"];
+
+            // Date object:
+            const date = new Date("2022-03-25");
+            let info = person.firstName + " " + person.lastName + " " + person.age + " " + person.city;
+
+            let myfavouritecar = cars[1];
+            document.getElementById('p1').innerHTML = info + myfavouritecar;
+
+            for (c in cars) {
+                document.writeln(c + "->" + cars[c]);
+            }
+
+        </script>
+
+    </div>
+
+
+
+</body>
+
+</html>

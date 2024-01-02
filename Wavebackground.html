@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="mycss1.css">
+    <style>
+        .top_wrapper {
+            position: relative;
+            background-image: url('img_mountains_wide.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 60vh;
+        }
+
+        .top_wrapper .wave {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="top_wrapper">
+        <div class="banner">
+            <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,160L48,144C96,128,192,96,288,117.3C384,139,480,213,576,213.3C672,213,768,139,864,96C960,53,1056,43,1152,69.3C1248,96,1344,160,1392,192L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#e7008a" fill-opacity="1"
+                d="M0,160L48,144C96,128,192,96,288,117.3C384,139,480,213,576,213.3C672,213,768,139,864,96C960,53,1056,43,1152,69.3C1248,96,1344,160,1392,192L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <div style="display: flex;">
+        <div data-aos="fade-left" style="background-color: gray; height: 200px; width:40%;margin: 0px 20px;">
+            <img src="img_lights_wide1.jpg" alt="lights" width="100%">
+        </div>
+
+    </div>
+    <div>
+        <div data-aos="" style="background-color: gray; height: 200px; width:40%; margin: 0px 20px; float: right;">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, dolore, nobis alias error iusto
+                impedit
+                facilis, tenetur vero distinctio facere modi! Aperiam sit quibusdam eligendi, dolores voluptatibus rem
+                animi
+                a?</p>
+        </div>
+
+    </div>
+
+    <div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#ff5500" fill-opacity="1"
+                d="M0,160L48,170.7C96,181,192,203,288,218.7C384,235,480,245,576,213.3C672,181,768,107,864,117.3C960,128,1056,224,1152,224C1248,224,1344,128,1392,80L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

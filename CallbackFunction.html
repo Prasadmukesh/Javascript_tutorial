@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back</title>
+</head>
+
+<body>
+    Name: <p id="p1"></p>
+
+    <script>
+
+        function Fullname(fname, lname, age, callback) {
+            const info = fname + " " + lname + " " + age;
+            Display(info);
+
+        }
+
+        function Display(text) {
+            document.getElementById("p1").innerHTML = text;
+        }
+
+        // calling function
+
+        Fullname("Tannu", "Jain", 18, Display);
+
+        function Findhighest(n1, n2, n3, callback) {
+            highest(n1, n2, n3);
+        }
+        function highest(a, b, c) {
+            let res = (a > b && a > c) ? a : (b > c ? b : c);
+            alert("Highest number is " + res);
+        }
+
+
+
+        // Callback Function
+
+        function Something() {
+            let message = "Good Morning India";
+            Hello(message);
+            Hello1("Hello TGC");
+            Hello2("Hello World");
+        }
+
+        function Hello(msg) {
+            alert(msg);
+        }
+        function Hello1(msg) {
+            alert(msg);
+        }
+        function Hello2(msg) {
+            alert(msg);
+        }
+
+        Something();
+        Findhighest(77, 88, 606, highest);
+
+
+    </script>
+</body>
+
+</html>

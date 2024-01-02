@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display date</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>Display current Date in a paragraph</h1>
+        <p id="p1"></p>
+        <p id="today"></p>
+        <p id="p2"></p>
+        <p>SUM : <span id="p3"></span></p>
+    </div>
+    <script>
+        const title = "Hello";
+        const mycity = "Delhi";
+        alert("Hello Geeta");
+        document.write("<b><span>Hello India</span></b>");
+
+        var city = title + " " + mycity;
+
+        console.log(city);
+
+        var n1 = 99;
+        var n2 = 199;
+        var c = n1 + n2;
+        console.log(c)
+        document.getElementById('p3').innerHTML = c;
+        document.getElementById('p1').innerHTML = "Hello Js!" + city;
+        document.getElementById('p1').style.color = "red";
+        document.getElementById('p1').style.fontSize = "30px";
+        document.getElementById('today').innerHTML = Date();
+
+
+    </script>
+
+</body>
+
+</html>

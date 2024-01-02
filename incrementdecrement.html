@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increment Decrement</title>
+</head>
+<style>
+    .container {
+        text-align: center;
+        height: 500px;
+        width: 100%;
+        background-color: black;
+        padding-top: 20%;
+
+    }
+
+    .container button {
+        width: 15%;
+    }
+
+    .container label {
+        margin-top: 20%;
+        width: 15%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <label for="" id="qty" style="color: aliceblue; "> 1 </label> <br>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+    </div>
+
+    <div>
+        <img src="img_girl.jpg" alt="" id="sampleimg"><br>
+        <button id="changeimg"> Change Image</button>
+    </div>
+
+
+    <script>
+
+        //increment decrement
+        let quantity = document.getElementById("qty").innerHTML;
+
+        document.getElementById("plus").onclick = function () {
+
+            quantity++;
+            document.getElementById('qty').innerHTML = quantity;
+        }
+
+        document.getElementById("minus").onclick = function () {
+
+            quantity--;
+            document.getElementById('qty').innerHTML = quantity;
+        }
+
+
+        //Changing Images
+
+        document.getElementById('changeimg').onclick = function () {
+
+            document.getElementById('sampleimg').src = "img_mountains_wide.jpg";
+        }
+
+
+    </script>
+</body>
+
+</html>

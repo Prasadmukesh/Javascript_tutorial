@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPerator in javascript</title>
+
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <marquee behavior="" direction="" style="background-color: black;color: antiquewhite;font-size: 25px;"
+        onmouseover="this.stop()" onmouseleave="this.start()">
+        www.tgcindia.com</marquee>
+    <h1 onmouseover="document.getElementById('h11').style.color='red'" id="h11">JAVASCRIPT OPERATOR</h1>
+
+
+
+    <input type="button" value="GREET ME" onclick="msg()">
+
+    <div class="center">
+        <form>
+            <table>
+                <tr>
+                    <td><label for=""> ENTER AMOUNT IN DOLLAR:</label></td>
+                    <td> <input type="text" id="t1"></td>
+                </tr>
+                <tr>
+                    <td><label for=""> AMOUNT IN RUPPEES:</label></td>
+                    <td> <input type="text" id="t2"></td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="CONVERT" onclick="dtor()"></td>
+                    <td><button type="reset">CANCEL</button></td>
+                </tr>
+            </table>
+
+        </form>
+
+        <br>
+        <br>
+
+
+
+    </div>
+    <div>
+        <form action="" id="f2">
+
+            <table>
+                <tr>
+                    <td><label for=""> ENTER FIRST NAME:</label></td>
+                    <td> <input type="text" id="fname"></td>
+                </tr>
+                <tr>
+                    <td><label for="">ENTER LAST NAME:</label></td>
+                    <td> <input type="text" id="lname"></td>
+                </tr>
+                <tr>
+                    <td><label for="">FULL NAME:</label></td>
+                    <td> <input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td> <input type="button" value="GETFULLNAME" onclick="fullname()">
+
+                        <input type="button" value="ADD" onclick="Add()">
+                        <input type="button" value="SUB" onclick="Sub()">
+                    </td>
+                    <td><button type="reset">CANCEL</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <script>
+        function dtor() {
+            var d = parseInt(document.getElementById('t1').value);
+            console.log(d);
+            var r = d * 83.12;
+            document.getElementById('t2').value = r;
+        }
+        function msg() {
+            window.alert("GOOD MORNING INDIA");
+        }
+
+        function fullname() {
+
+            f2.name.value = f2.fname.value + " " + f2.lname.value;
+
+        }
+        function Add() {
+            var a = parseFloat(f2.fname.value);
+            var b = parseFloat(f2.lname.value);
+            var c = a + b;
+            f2.name.value = c;
+        }
+        function Sub() {
+            var a = parseFloat(f2.fname.value);
+            var b = parseFloat(f2.lname.value);
+            var c = a - b;
+            f2.name.value = c;
+        }
+
+    </script>
+
+</body>
+
+</html>

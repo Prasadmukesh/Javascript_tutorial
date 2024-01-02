@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <meta name="author" content="tgc">
+</head>
+
+<body style="margin: 100px; font-size: 25px;">
+    <div style="height:100px;background-color: blueviolet;text-align: center; color: aliceblue;">
+        <h1>Data binding In List and Dropdownlist</h1>
+    </div>
+    <!--  -->
+    <div style="margin-bottom: 50px;">
+        <input type="button" value="SayHello" id="btn1" style="width: 160px; background-color: brown; color:aliceblue">
+
+        <script>
+            document.getElementById('btn1').onclick = function () {
+                alert("Hello Students !");
+            }
+        </script>
+    </div>
+
+
+    <input type='text' id='tdata'>
+    <input type="button" id="add" value="Add Item in list">
+
+    <br>
+    <br>
+    <input type='text' id='idea'>
+    <input type="button" id="additem" value="Add Item in select">
+    <script>
+        /* add item in list*/
+        document.getElementById("add").onclick = function () {
+
+            var node = document.createElement("li");
+            var item = document.getElementById("tdata").value;
+            var textnode = document.createTextNode(item);
+            node.appendChild(textnode);
+            document.getElementById("list").appendChild(node);
+        }
+
+        /* add item in select*/
+        document.getElementById("additem").onclick = function () {
+
+            var node = document.createElement("option");
+            var item = document.getElementById("idea").value;
+            var textnode = document.createTextNode(item);
+            node.appendChild(textnode);
+            document.getElementById("con").appendChild(node);
+        }
+
+        function fun() {
+            let item = document.getElementById("con").value;
+            console.log(item);
+            document.getElementById("data").innerHTML = item;
+
+        }
+    </script>
+    <h1>Topics</h1>
+    <ol id='list'>
+
+    </ol>
+
+    <select name="countrylist" id="con" onchange="fun();">
+        <option value="Select" selected>Select Item</option>
+
+    </select>
+    <br>
+    <br>
+    <br>
+    <label for="">You have selected:<span id="data"></span></label>
+
+</body>
+
+</html>

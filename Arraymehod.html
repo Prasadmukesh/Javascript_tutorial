@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArrayMethod</title>
+    <style>
+        p {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Original Array:</p> <br>
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p>Sorted Array:</p> <br>
+        <p id="res"></p>
+        <p> Reverse Sorted Array:</p> <br>
+        <p id="res1"></p>
+        <p>Sorted Prices Array:</p> <br>
+        <p id="res2"></p>
+    </div>
+    <script>
+        const arr1 = ["Banana", "Orange", "pineapple", "Kiwi", "Lemon", "Licchi"];
+        const prices = [80.00, 100.00, 120.00, 200.00, 120.00, 130.00];
+        let fruits = arr1.toString();
+        document.getElementById('demo1').innerHTML = fruits + " " + typeof fruits + " " + typeof arr1;
+        console.log(Array.isArray(arr1));
+        arr1.sort();
+
+        document.getElementById('res').innerHTML = arr1;
+        arr1.reverse();
+        document.getElementById('res1').innerHTML = arr1;
+        document.getElementById('demo2').innerHTML = prices;
+        prices.sort(function (a, b) { return a - b });
+        document.getElementById('res2').innerHTML = prices;
+
+    </script>
+
+
+
+</body>
+
+</html>

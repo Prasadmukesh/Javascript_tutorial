@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js class1</title>
+    <style>
+        .container {
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1 id="heading1">
+            First JavaScript Class
+        </h1>
+        <h3 id="today"></h3>
+    </header>
+    <marquee behavior="" direction="" style="background-color: black; color: antiquewhite; font-size: 30px;"
+        onmouseover="this.stop()" onmouseleave="this.start()">
+        <a href="https:/www.tgcindia.com" style="color: yellow;"> www.tgcindia.com</a>
+
+    </marquee>
+    <hr>
+    <div class="container">
+        <p onmouseover="document.getElementById('p1').style.color='Red'" id="p1">Hello Javascript</p>
+        <button onclick="alert('Hello Good morning India')">Click me</button>
+        <input type="button" value="Changecolor" onclick="document.getElementById('heading1').style.color='gray'">
+        <input type="button" value="Showdate" onclick="document.getElementById('today').innerHTML=Date().toString()">
+        <br>
+        <input type="button" value="changebgcolor" onclick="document.body.style.backgroundColor='yellow'">
+        <br>
+        <input type="button" value="changetextcolor" onclick="document.body.style.color='blue'">
+        <br>
+        <br>
+        <h1 id="mymessage"></h1>
+
+
+        <script>
+            const institute = 'TGC';
+            let branch = 'PITAMPURA';
+            city = 'DELHI';
+            var pin = 110034;
+            console.log(typeof pin);
+            // alert("Welcome to my javascript world");
+            document.write("Hello TGC INDIA");
+            branch = "KOHAT ENCLAVE";
+            var pin = "110034";
+            console.log(typeof pin);
+            document.getElementById('mymessage').innerHTML = "WELCOME TO " + institute + " " + " " + branch + "" + city + " " + pin;
+            console.log(branch + " " + pin);
+        </script>
+        <div>
+            <form action="" id="f1">
+                <label for="">Write a Message</label> <br>
+                <textarea name="msg" id="msg" cols="30" rows="10"></textarea> <br>
+                <input type="button" value="showmsg" onclick="alert(f1.msg.value)">
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+    <hr>
+    <div style="height: 100px;background-color: blueviolet;">
+        <p style="font-size:large; color: aliceblue;">
+            Date: <span id="dt"></span> <br>
+            Time:<span id="time"></span>
+        </p>
+        <script>
+            let today = new Date();
+            document.getElementById('dt').innerHTML = today.toLocaleDateString();
+            document.getElementById('time').innerHTML = today.toLocaleTimeString();
+        </script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js function</title>
+
+    <script>
+        /* non parameter*/
+        function Hello() {
+            alert("Good morning India");
+        }
+        /*parametyerized function*/
+        function Sayhello(name) {
+            alert("Hello " + name)
+        }
+        function Add(p, q) {
+            var c = p + q;
+
+            //  alert(c);
+
+            document.getElementById('demo').innerHTML = c;
+        }
+        function Mul(p, q) {
+            let m = p * q;
+            return (m);
+
+        }
+        function ctof(c) {
+            let f = (9 * c) / 5 + 32;
+            //  alert("Temp  in fehrenheit  " + f);
+            document.getElementById('t').innerHTML = f;
+        }
+
+    </script>
+</head>
+
+<body>
+    <p> sum is =<span id="demo"></span></p>
+    <h2>multiply is : <span id="m1"></span></h2>
+    <h2>Temp in fehrenheit: <span id="t"></span></h2>
+
+
+    <script>
+        temp = parseInt(prompt("Enter temp in celcius:"));
+        ctof(temp);
+        /* x = parseInt(prompt("Enter a number"));
+         y = parseInt(prompt("Enter another number"));
+         Add(x, y);
+         let p = Mul(x, y);
+         document.getElementById('m1').innerHTML = p;
+         // Hello();
+         // Sayhello("Shivani");*/
+
+    </script>
+
+</body>
+
+</html>

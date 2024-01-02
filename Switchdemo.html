@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+
+<body>
+    <h1>Today is <span id="curday"></span></h1>
+    <script>
+        let today = new Date();
+        let tday = today.getDay();
+        document.getElementById('curday').innerHTML = tday;
+    </script>
+    <div>
+        <form action="">
+            <label for="">
+                Enter Day Number:
+            </label> <br> <br>
+            <input type="text" name="" id="num1">
+            <br> <br>
+
+            <input type="button" value="Click" onclick="GetMessage()">
+        </form>
+        <div>
+            <h1 id="msg" style="color: green;"></h1>
+        </div>
+
+        <div>
+            <form action="">
+                <label for="">Select Item:</label>
+                <select name="item" id="item">
+                    <option value="Pen">Pen Rs. 199.00</option>
+                    <option value="Mouse"> Mouse Rs. 299.00</option>
+                    <option value="Pendrive">Pen Rs. 199.00</option>
+                    <option value="Keyboard"> Mouse Rs. 299.00</option>
+                    <option value="Marker">Pen Rs. 199.00</option>
+                    <option value="Datacable"> Mouse Rs. 299.00</option>
+                </select>
+                <label for="">Enter Quantity:</label>
+                <input type="text" name="qty" id="qty"> <br> <br>
+                <input type="button" value="CalculateBill" onclick="Cal()">
+
+
+            </form>
+
+        </div>
+
+        <!--  -->
+        <script src="Yukti.js">
+
+        </script>
+
+    </div>
+</body>
+
+</html>

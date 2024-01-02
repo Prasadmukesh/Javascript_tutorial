@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisrt</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Javascript</h1>
+    <p id="today" style="text-align: center;"></p>
+    <p id="time" style="text-align: center;"></p>
+    <hr>
+
+    <h2>
+        <span>My Information:</span><span id="myinfo"></span>
+    </h2>
+    <button type="button" onclick="alert(`hello mr. sumit`)">Cickme</button>
+
+
+    <br> <br>
+    <input type="button" value="Show Time" onclick="document.getElementById('time').innerHTML=Date();">
+    <br><br>
+    <script>
+        const name = "Sumit";
+        let age = 19;
+        var city = "Delhi";
+        course = "FSD";
+
+        // alert("Hello " + name + " " + age + " " + city + " " + course);
+        console.log(name);
+        document.write("Hello " + name + " " + age + " " + city + " " + course);
+        var mydetails = name + " " + age + " " + city + " " + course;
+        document.getElementById('myinfo').innerHTML = "Hello " + mydetails;
+        document.getElementById('myinfo').style.color = '#FF0000';
+        document.getElementById('myinfo').style.fontSize = '40px';
+
+        var td = new Date();
+        document.getElementById('today').innerHTML = "Date :" + td.toLocaleDateString() + "Time: " + td.toLocaleTimeString();
+        document.getElementById('today').style.color = "Blue";
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun demo</title>
+</head>
+
+<body>
+    <div>
+        <h1>Hello Sumit</h1>
+        <label for="">Enter Temp in Celcius:</label>
+        <input type="text" name="" id="t1"> <br>
+
+        <label for="">Temp in F :</label><label for="" id="res"></label> <br> <br>
+
+        <button type="button" onclick="CTOF()">TempConvertor</button>
+
+    </div>
+    <script>
+        function message() {
+            alert("Good morning Welcome to mywebsite");
+        }
+        function Sayhello(country) {
+            alert("Good morning " + country);
+        }
+        function Area(l, b) {
+            let ar = l * b;
+            alert("Area of Rectangle is " + ar + "sqrfeet");
+        }
+        function CTOF() {
+
+            let temp = document.getElementById('t1').value;
+
+            let f = (9 * temp) / 5 + 32;
+            // alert("Temp in F " + f);
+            document.getElementById('res').innerHTML = f;
+        }
+
+
+    </script>
+    <script>
+        // message();
+        // Sayhello("India");
+        // let l = parseFloat(prompt("Enter length:"))
+        //let b = parseFloat(prompt("Enter width:"))
+
+        //  Area(l, b);
+        //  let celcius = parseFloat(prompt("Enter Temp in celcius:"))
+        // CTOF(celcius);
+
+
+    </script>
+
+</body>
+
+</html>

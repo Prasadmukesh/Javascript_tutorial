@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INcrement and Decrement Operator</title>
+    <style>
+        body {
+            background-color: black;
+            color: #fff;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 80px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+
+        }
+
+        input[type="button"] {
+            height: 50px;
+            width: 120px;
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="" style="text-align: center;">
+            <label for="" id="inc">0</label><br>
+            <input type="button" value="+" id="btn1">
+            <input type="button" value="-" id="btn2">
+            <input type="button" value="RESET" id="btn3">
+
+        </form>
+
+
+    </div>
+    <button type="button" id="btn4">Click me</button>
+    <label for="" id="dt"></label>
+    <script>
+        var x = document.getElementById("inc").innerHTML;
+        console.log(x);
+        document.getElementById('btn1').onclick = function () {
+            x++;
+            console.log(x);
+            document.getElementById('inc').innerHTML = x;
+        }
+        document.getElementById('btn2').onclick = function () {
+            x--;
+            console.log(x);
+            document.getElementById('inc').innerHTML = x;
+        }
+        document.getElementById('btn3').onclick = function () {
+            x = 0;
+            document.getElementById('inc').innerHTML = x;
+        }
+        // addEventListener function
+
+        let y = document.getElementById('btn4');
+        y.addEventListener("click", function () {
+            const date = new Date();
+            document.getElementById('dt').innerHTML = date.toLocaleTimeString();
+        })
+
+        function displaydate() {
+            const date = new Date();
+            document.getElementById('dt').innerHTML = date.toLocaleDateString();
+        }
+        function Hello() {
+            document.getElementById('dt').innerHTML = "Hello my Tgc Students";
+
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration Method</title>
+
+    <style>
+        header {
+            background-image: url(img_snow_wide.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="height: 100vh; display: flex;align-items: center;justify-content: center;">
+        <h1>Array Iteration Method</h1>
+        <div>
+
+        </div>
+    </header>
+
+
+    <hr>
+    <h2>JavaScript Array forEach()</h2>
+    <p>The forEach() method calls a function (a callback function) once for each array element.</p>
+    <div id="output" style="color: green;font-size: 25px;">
+        original data: <p id="p1"></p>
+        square of data: <p id="p2"></p>
+        new list:<p id="p3"></p>
+        cube list:<p id="p4"></p>
+    </div>
+
+    <script>
+        const numbers = [5, 4, 9, 6, 10];
+
+        const list = numbers.map(display);
+        document.getElementById("p1").innerHTML = list;
+
+        function display(value) {
+            return value;
+        }
+    </script>
+
+
+    <script>
+        const numbers1 = [5, 4, 9, 6, 10];
+        const numbers2 = numbers1.map(sqr);
+        document.getElementById("p2").innerHTML = numbers2;
+
+        const newlist = numbers1.map(add);
+        document.getElementById("p3").innerHTML = newlist;
+
+        let cubelist = numbers1.map(cube);
+        document.getElementById("p4").innerHTML = cubelist;
+        function sqr(n) {
+            return n ** 2;
+        }
+        function add(n) {
+            return n + 10;
+        }
+        function cube(n) {
+            return n ** 3;
+        }
+    </script>
+
+    <h3>
+        JavaScript Array flatMap()
+        <p>Result1: <span id="res"></span></p>
+        <p>Result2: <span id="res1"></span></p>
+        <p>Result3: <span id="res2"></span></p>
+        <p>Result4: <span id="res3"></span></p>
+        <p>Result5: <span id="res4"></span></p>
+        <p>Result6: <span id="res5"></span></p>
+        <p>Result7: <span id="res6"></span></p>
+        <p>Result8: <span id="res7"></span></p>
+        <p>Result9: <span id="res8"></span></p>
+    </h3>
+    <script>
+        const arr1 = [13, 14, 23, 53, 46, 54, 36, 54, 65];
+        // (x) => x * 2 Arrow function
+        const newArr1 = arr1.flatMap((n) => n * 2);
+        const newArr2 = arr1.flatMap((n) => n ** 2);
+        // const newArr3 = arr1.filter(even);
+        const newArr3 = arr1.filter((n) => n % 2 == 0);
+        let total = arr1.reduce(addall);
+        let allOver = arr1.every(checkp);
+        let someOver18 = arr1.some(greater18);
+        let sometext = "Hello Tgc delhi India";
+        const myArr = Array.from(sometext);
+        let ln = arr1.reduce(mulall);
+        document.getElementById('res').innerHTML = newArr1;
+        document.getElementById('res1').innerHTML = newArr2;
+        document.getElementById('res2').innerHTML = newArr3;
+        document.getElementById('res3').innerHTML = total;
+        document.getElementById('res4').innerHTML = ln;
+        document.getElementById('res5').innerHTML = allOver;
+        document.getElementById('res6').innerHTML = someOver18;
+        document.getElementById('res7').innerHTML = myArr;
+
+
+        function even(n) {
+            if (n % 2 == 0) {
+                return n;
+            }
+        }
+        function addall(t, n) {
+            return t += n;
+        }
+        function mulall(t, n) {
+            return t *= n;
+        }
+        function checkp(value) {
+            return value > 0;
+        }
+        function greater18(n) {
+            return n > 18;
+        }
+
+        /* Spread Operator */
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "Dec"];
+
+        const year = [...q1, ...q2, ...q3, ...q4];
+        document.getElementById("res8").innerHTML = year; 
+    </script>
+</body>
+
+</html>

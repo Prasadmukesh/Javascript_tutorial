@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Loop Statement</title>
+</head>
+
+<body>
+    <div>
+        <h3>sum of first 100 even natural number: </h3>
+        <h3 id="evensum"></h3>
+        <h3>sum of first 100 odd natural number: </h3>
+        <h3 id="oddsum"></h3>
+        <p>Car List:<span id="car"></span></p>
+
+    </div>
+    <script>
+        const Cars = ["Honda", "BMW", "Audi", "Mahindra", "Kia", "Hyundai", "Swift", "Tata", "Jaguar"];
+        const mpg = [12, 15, 10, 10, 18, 9, 20, 16, 10];
+        //for loop
+        let carlist = " ";
+        for (var i = 0; i < Cars.length; i++) {
+            carlist += Cars[i] + " : " + mpg[i] + " ,";
+        }
+        document.getElementById('car').innerHTML = carlist;
+        for (var i = 0; i < Cars.length; i++) {
+            document.write(Cars[i]);
+        }
+
+        //for in
+        for (var i in Cars) {
+            document.write(Cars[i] + ", ");
+
+        }
+
+        //for of loop
+        for (var x of Cars) {
+            document.write(x + "<br>");
+
+        }
+
+
+        //while loop
+        var k = 10;
+        while (k <= 100) {
+            document.write(k + "<br>");
+            k = k + 10
+
+        }
+
+        //do while loop
+        var n = 10;
+        do {
+            document.write(n + "<br>");
+            n = n + 10
+        } while (n <= 100);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

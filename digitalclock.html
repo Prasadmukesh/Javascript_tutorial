@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background: rgb(236, 8, 8);
+        }
+
+        .clock {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            color: #fff;
+            font-size: 80px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+            border: 2px solid white;
+
+
+
+        }
+
+        .g-Roboto {
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div>
+        <p class="g-Roboto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, harum, non nihil dolore doloribus itaque
+            numquam possimus nostrum necessitatibus reprehenderit, sit fugiat adipisci! Nobis libero tenetur iste ullam
+            laboriosam accusamus!
+        </p>
+    </div> -->
+
+    <div id="MyClock" class="clock" onload="showTime()">
+
+    </div>
+
+    <script>
+
+        function showTime() {
+            var date = new Date();
+            var h = date.getHours(); // 0 - 23
+            var m = date.getMinutes(); // 0 - 59
+            var s = date.getSeconds(); // 0 - 59
+            var session = "AM";
+
+            if (h == 0) {
+                h = 12;
+            }
+
+            if (h > 12) {
+                h = h - 12;
+                session = "PM";
+            }
+
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("MyClock").innerText = time;
+
+            document.getElementById("MyClock").innerText = time;
+
+            setTimeout(showTime, 1000);
+
+        }
+
+        showTime();
+
+    </script>
+</body>
+
+</html>

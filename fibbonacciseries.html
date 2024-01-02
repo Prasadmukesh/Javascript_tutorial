@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of natural number</title>
+</head>
+
+<body>
+    <p style="font-size: 30px;">factorial of number : <span id="res" style="font-size: 30px;"></span></p>
+    <script>
+        /* num = 28;
+        k = 1;
+        c = 0;
+        s = 0;
+        while (k < num) //cond
+        {
+            if (num % k == 0) {
+                console.log(k);
+                s = s + k;
+                c++;
+
+            }
+            k += 1; //inc
+        }
+        console.log("Number of factors is " + c);
+        if (s == num) {
+            console.log("perferct number" + num);
+        }
+        else {
+            console.log(" not a perferct number" + num);
+        } 
+
+
+        //  document.getElementById('res').innerHTML = fact;
+
+        let n = 1;
+        let s = 0;
+        let c = 0;
+        do {
+            if (n % 6 == 0 && n % 4 != 0) {
+                console.log(n);
+                s += n;
+                c = c + 1;
+
+            }
+            n++;
+        } while (n <= 300);
+
+        console.log("sum is" + s);
+        console.log(" no of elements" + c);
+*/
+        // for in loop
+        const items = ["pen", "book", "calculator", "watch", "bag", "colorbox"]
+        const pcost = [123.99, 555.00, 665.99, 90.00, 666.00, 345.00];
+
+        for (var i in items) {
+            console.log(i + ":" + items[i]);
+        }
+        let total = 0;
+        for (var cost of pcost) {
+            console.log(cost);
+            total += cost;
+        }
+        console.log("Total cost is Rs. " + total);
+
+    </script>
+
+</body>
+
+</html>

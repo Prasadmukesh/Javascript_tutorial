@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Element </title>
+</head>
+
+<body>
+    <div>
+        <h1> Dom Element </h1>
+        <h3>There are several ways to access data from dom elements</h3>
+    </div>
+    <p class="intro" style="display: none;"> Hi i am Mukesh , Finding HTML Elements by Id</p>
+    <p class="intro" style="display: none;"> Hi i am Rakesh , Finding HTML Elements by Id</p>
+    <p class="intro" style="display: none;"> Hi i am Ramesh , Finding HTML Elements by Id</p>
+
+    <p>Finding HTML Elements by Tag Name.</p>
+
+
+    <p class="abc">Hello World!</p>
+    <p class="abc">Hello India!</p>
+
+    <p id="demo"></p>
+    <img id="image1" src="img_lights_wide.jpg" width="160" height="120">
+    <br>
+    <input type="button" value="Change Image" id="btn1">
+
+    <input type="button" value="CLICK ME" id="btn2">
+    <script>
+        document.getElementById("btn2").onclick = function () {
+            alert("Hello I am Shivani Sharma!");
+        }
+    </script>
+
+    <h3 id="d1"></h3>
+    <h3 id="d2"></h3>
+    <h3 id="d3"></h3>
+
+    <form id="form1" action=" ">
+        First name: <input type="text" name="fname" value="Mukesh"><br>
+        Last name: <input type="text" name="lname" value="Kumar"><br><br>
+        Email: <input type="text" name="email" value="kumarmukesh.tgc@gmail.com"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="p1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque numquam voluptates aliquam dolore eius
+        dolor dolores quibusdam? Molestias molestiae a eum. Nesciunt voluptatibus adipisci eaque nam obcaecati dolor
+        officia doloribus?
+    </p>
+    <input type="button" value="Hide text" onclick="document.getElementById('p1').style.visibility='hidden'">
+    <input type="button" value="Show text" onclick="document.getElementById('p1').style.visibility='visible'">
+    <script>
+        const x = document.getElementById("intro");
+        //document.getElementById("demo").innerHTML = x.innerHTML;
+        const y = document.getElementsByTagName("p");
+
+        document.getElementById("d1").innerHTML = y[1].innerHTML;
+        document.getElementById("d1").style.color = "red";
+
+        //by class name
+        const z = document.getElementsByClassName("abc");
+
+        document.getElementById("d2").innerHTML = z[0].innerHTML + z[1].innerHTML;
+        document.getElementById("d2").style.color = "Green";
+
+        const p = document.querySelectorAll("p.intro");
+
+        document.getElementById("demo").innerHTML = p[1].innerHTML;
+
+        // access by object name
+        const f1 = document.forms["form1"];
+        let formdetails = "";
+        for (let i = 0; i < f1.length; i++) {
+            formdetails += f1.elements[i].value + "<br>";
+        }
+        document.getElementById("d3").innerHTML = formdetails;
+
+
+
+        document.getElementById('btn1').onclick = function () {
+
+
+            document.getElementById("image1").src = "img_nature_wide.jpg";
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

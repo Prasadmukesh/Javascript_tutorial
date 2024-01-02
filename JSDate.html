@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date object Example</title>
+    <style>
+        .cen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cen">
+        <h1>Date Object Example </h1>
+    </div>
+    <div style="background-color: aqua; margin-top: 10px;">
+        <h1> Date:<span id="date"></span></h1>
+        <h2 id="dt"></h2>
+        <h2 id="dt1"></h2>
+        <h2>Time : <span id="timed"></span></h2>
+        <h2>Time : <span id="timed1"></span></h2>
+        <p id="Time" style="font-size: 50px;">
+
+        </p>
+    </div>
+    <script>
+        let tdate = new Date();
+        let day = tdate.getDate();
+        let mon = tdate.getMonth() + 1;
+        let year = tdate.getFullYear();
+        document.getElementById('date').innerHTML = tdate;
+        document.getElementById('dt').innerHTML = day + "-" + mon + "-" + year;
+        document.getElementById('dt1').innerHTML = tdate.toLocaleDateString();
+        document.getElementById('timed').innerHTML = tdate.toLocaleTimeString();
+        let hour = tdate.getHours();
+        let min = tdate.getMinutes();
+        let sec = tdate.getSeconds();
+        let ms = tdate.getMilliseconds();
+
+        let time = hour + ":" + min + ":" + sec + ":" + ms;
+        document.getElementById('timed1').innerHTML = time;
+
+        setInterval(function () {
+
+            let t = Date();
+            let c = document.getElementById("Time");
+            let ss = t.substring(16, 24);
+            c.innerHTML = ss;
+        }, 1000);
+
+    </script>
+    <div>
+        <p>
+            Date: <span id="today"></span>
+        </p>
+        <script>
+            /*   let d = new Date();
+               let day = d.getDate();
+               let mon = d.toLocaleString('default', { month: 'long' });
+               let year = d.getFullYear();
+   
+   
+   
+               document.getElementById('today').innerHTML = day + "-" + m + "-" + year;*/
+        </script>
+    </div>
+</body>
+
+</html>

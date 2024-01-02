@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js if statement</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Js If statement</h1>
+    </header>
+    <hr>
+    <div>
+        <form action="">
+            <label for="">Enter Any Integer:</label> <br>
+            <input type="text" id="number">
+            <input type="button" value="Check it" onclick="Checknumber()">
+            <input type="button" value="Checkme" onclick="sweetalert2()">
+        </form>
+    </div>
+    <div>
+        <form action="">
+            <label for="">Enter First number:</label> <br>
+            <input type="text" id="number1"> <br>
+            <label for="">Enter secound number:</label> <br>
+            <input type="text" id="number2"> <br>
+            <label for="">Enter Third number:</label> <br>
+            <input type="text" id="number3"> <br>
+            <label for="result" id="result" style="font-size: large;color: red;"></label>
+            <br>
+            <input type="button" value="MAX" onclick=" FindHighest()">
+            <input type="button" value="MIN" onclick="CheckLowest()">
+        </form>
+    </div>
+    <br>
+    <!-- find grade -->
+    <div>
+        <form action="" id="f3">
+            <label for="">ENTER MARKS:</label>
+            <input type="text" id="m1" placeholder="Enter marks"> <span style="color: red;" id="error"></span>
+            <input type="button" value="GetGrade" onclick="Setgrade()">
+        </form>
+    </div>
+    <!--  -->
+
+
+    <script>
+        function Setgrade() {
+            marks = parseInt(document.getElementById('m1').value);
+            if (document.getElementById('m1').value == '') {
+                //alert("Please enter marks");
+                document.getElementById('error').innerHTML = " *Please enter marks";
+                return 0;
+            }
+            if (marks > 90) {
+                alert("Excellent");
+            }
+            else if (marks > 80 && marks <= 90) {
+                alert("Very Good");
+            }
+            else if (marks > 70 && marks <= 80) {
+                alert("Good");
+            }
+            else if (marks > 60 && marks <= 70) {
+                alert("Average");
+            }
+            else if (marks > 50 && marks <= 60) {
+                alert("Fair");
+            }
+            else {
+                alert("Poor");
+            }
+        }
+        function Checknumber() {
+            let num = parseInt(document.getElementById('number').value);
+            if (num > 0) {
+                alert("Positive number");
+            }
+            if (num < 0) {
+                alert("negative number");
+            }
+            if (num == 0) {
+                alert("Zero number");
+            }
+        }
+        function sweetalert2() {
+            num = parseInt(document.getElementById('number').value);
+            Swal.fire('Good job!',
+                'You clicked the button!' + num,
+                'success'
+            )
+        }
+        function Checkhighest() {
+            n1 = document.getElementById('number1').value;
+            n2 = document.getElementById('number2').value;
+            n3 = document.getElementById('number3').value;
+            if (n1 > n2 && n1 > n3) {
+                document.getElementById('result').innerHTML = n1 + "Highest value";
+            }
+            if (n2 > n1 && n2 > n3) {
+                document.getElementById('result').innerHTML = n2 + "Highest value";
+            }
+            if (n3 > n1 && n3 > n2) {
+                document.getElementById('result').innerHTML = n3 + "Highest value";
+            }
+        }
+        function CheckLowest() {
+            n1 = document.getElementById('number1').value;
+            n2 = document.getElementById('number2').value;
+            n3 = document.getElementById('number3').value;
+            if (n1 < n2 && n1 < n3) {
+                document.getElementById('result').innerHTML = n1 + "Lowest value";
+            }
+            if (n2 < n1 && n2 < n3) {
+                document.getElementById('result').innerHTML = n2 + "Lowest value";
+            }
+            if (n3 < n1 && n3 < n2) {
+                document.getElementById('result').innerHTML = n3 + "Lowest value";
+            }
+        }
+        // if else if 
+        function GetHighest() {
+            n1 = document.getElementById('number1').value;
+            n2 = document.getElementById('number2').value;
+            n3 = document.getElementById('number3').value;
+
+            if (n1 > n2 && n1 > n3) {
+                alert("Highest value is " + n1);
+
+            }
+            else if (n2 > n3) {
+                alert("Highest vlaue  is" + n2);
+            }
+            else {
+                alert("Highest vlaue  is" + n3);
+
+            }
+        }
+        // nested if
+        function FindHighest() {
+            n1 = document.getElementById('number1').value;
+            n2 = document.getElementById('number2').value;
+            n3 = document.getElementById('number3').value;
+            if (n1 > n2) {
+                if (n1 > n3) {
+                    alert("Highest number is" + n1);
+                }
+                else {
+                    alert("Highest number is" + n3);
+                }
+            }
+            else {
+                if (n2 > n3) {
+                    alert("Highest number is" + n2);
+                }
+                else {
+                    alert("Highest number is" + n3);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

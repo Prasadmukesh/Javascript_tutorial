@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul {
+            list-style: none;
+            background-color: black;
+            text-align: center;
+        }
+
+        ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        ul li a {
+            text-decoration: none;
+            display: block;
+            color: gold;
+            padding: 18px 25px;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        ul li .submenu {
+            display: none;
+            position: absolute;
+            width: 100%;
+
+
+        }
+
+        ul li:hover .submenu {
+            display: block;
+
+
+        }
+
+        ul li .submenu li {
+            display: block;
+            color: black;
+            margin: 2px 0px;
+            padding: 2px 6px;
+            text-align: center;
+        }
+
+        ul li a:hover {
+            background-color: chocolate;
+
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="#home">Home</a>
+            <ul class="submenu">
+                <li>Python
+
+                </li>
+                <li>Python </li>
+                <li>Python </li>
+                <li>Python </li>
+                <li>Python</li>
+            </ul>
+        </li>
+        <li><a href="#home">Course</a></li>
+        <li><a href="#home">Course</a></li>
+        <li><a href="#home">Course</a></li>
+        <li><a href="#home">Course</a></li>
+    </ul>
+</body>
+
+</html>

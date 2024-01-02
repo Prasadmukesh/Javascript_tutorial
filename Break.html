@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break and Continue statement in Js</title>
+</head>
+
+<body>
+
+    <script>
+        var names = ["Khushi", "Harsh", "Pawan", "Gaurav", "Pawan", "Vaibhav", "Pawan", "Sajan"];
+        var ages = [18, 19, 20, 22, 21, 20, 21];
+        // break statement
+        for (var k = 1; k <= 100; k++) {
+            document.write(k + " ,");
+            if (k == 20) {
+                break;
+            }
+        }
+        document.write("<br>");
+        for (var i = 0; i < names.length; i++) {
+            document.write(names[i] + " ");
+            if (names[i] == "Pawan") {
+                break;
+            }
+        }
+
+        document.write("<br>");
+        // continue statement
+        for (var k = 1; k <= 100; k++) {
+
+            if (k % 5 == 0) {
+                continue;
+            }
+            document.write(k + " ,");
+        }
+
+        //object in js
+        let Person = [{
+            id: 100,
+            name: "Mukesh",
+            age: 33,
+            city: "Delhi",
+            salary: 120000,
+            pic: "img_girl.jpg"
+        },
+        {
+            id: 101,
+            name: "Gaurav",
+            age: 20,
+            city: "Delhi",
+            salary: 140000
+        },
+        {
+            id: 104,
+            name: "Tannu",
+            age: 18,
+            city: "Delhi",
+            salary: 130000
+        },
+        {
+            id: 105,
+            name: "Srishti",
+            age: 18,
+            city: "Delhi",
+            salary: 130000
+        }];
+
+        let person = {
+            id: 10104,
+            fname: "Mukesh",
+            lname: "Kumar",
+            age: 33,
+            city: "Delhi",
+            salary: 45000.00,
+            fullname: function () {
+                return this.fname + " " + this.lname;
+            },
+            updatesal: function (amount) {
+                this.salary = this.salary + amount;
+            }
+        };
+        document.write("<br>");
+        document.write("Person Details : " + person.id + "," + person.fullname() + ", " + person.age + "," + person.city + "," + person.salary)
+        document.write("<br>");
+
+        person.updatesal(5000);
+        document.write("New salary=" + person.salary);
+        document.write("<br>");
+        var plist = "<ul>";
+        for (var p of Person) {
+            plist += `</li>${p.id} + " " + ${p.name} + " " + ${p.age} + " " + ${p.city}+ " " + ${p.salary} + " " +${p.pic}+ </li>`;
+        }
+        plist += "</ul>";
+        document.getElementById('lst').innerHTML = plist;
+
+        let tsal = 0;
+
+
+        for (var p of Person) {
+
+            tsal += p.salary;
+
+        }
+        document.write(`Total salary is Rs. ${tsal}`);
+
+        document.write("salary of person 1 " + Person[0].salary)
+    </script>
+
+</body>
+
+</html>
